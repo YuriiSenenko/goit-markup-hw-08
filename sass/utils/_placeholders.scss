@@ -1,0 +1,38 @@
+%visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+%button {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $color-text-btn;
+    background-color: $color-accent;
+    cursor: pointer;
+}
+%section-padding {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+%sections-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: $color-title;
+}
