@@ -1,10 +1,17 @@
-@mixin container($type: flex) {
-    display: $type;
-    box-sizing: border-box;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
+// @mixin container($type: flex) {
+//     display: $type;
+//     box-sizing: border-box;
+//     width: 1200px;
+//     padding-left: 15px;
+//     padding-right: 15px;
 
-    margin-right: auto;
-    margin-left: auto;
+//     margin-right: auto;
+//     margin-left: auto;
+// }
+@mixin title($size: 28px, $height: calc(33 / 28)) {
+    text-align: center;
+    font-weight: bold;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: 0.03em;
 }

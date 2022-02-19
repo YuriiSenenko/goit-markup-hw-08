@@ -1,8 +1,10 @@
-@import "./base/reset-style";
 @import "./utils/variables";
+@import "./base/reset-style";
 @import "./utils/placeholders";
 @import "./utils/mixins";
+@import "./utils/breakpoints";
 @import "./components/logo";
+@import "./components/mobile-menu";
 @import "./components/header";
 @import "./components/hero";
 @import "./components/peculiarities";

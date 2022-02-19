@@ -9,8 +9,14 @@
 }
 
 .logo--header {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @media screen and (max-width: 767px) {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
 
     & span {
         color: $color-black-logo;
@@ -18,6 +24,10 @@
 }
 
 .logo--footer {
+    @media screen and (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+    }
     & span {
         color: $color-text-white;
     }

@@ -3,19 +3,13 @@
     padding-bottom: 60px;
     background-color: $color-bg-footer;
 }
-.footer-container {
-    align-items: baseline;
-}
-
 .addresses {
     margin-top: 20px;
-    margin-right: 70px;
+    text-align: center;
 }
-
 .addresses__item:not(:first-child) {
-    margin-top: 9px;
+    margin-top: 8px;
 }
-
 .addresses__link {
     color: $color-text-white;
     font-style: normal;
@@ -40,22 +34,23 @@
 }
 
 .social-block__title {
-    color: $color-text-white;
-
+    margin-top: 60px;
+    text-align: center;
     font-style: normal;
     font-weight: bold;
     line-height: 1.14;
     text-transform: uppercase;
+
+    color: $color-text-white;
 }
 .social-networks {
     display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
-
 .social-networks__item:not(:last-child) {
     margin-right: 10px;
 }
-
 .social-networks__link {
     display: block;
     box-sizing: border-box;
@@ -75,31 +70,22 @@
 .social-networks__icon {
     fill: $color-primery-bg;
 }
-
-.subscription-form {
-    margin-left: auto;
-}
-
 .subscription-form__title {
-    color: $color-text-white;
-
+    margin-top: 60px;
+    text-align: center;
     font-style: normal;
     font-weight: bold;
     line-height: 1.14;
     text-transform: uppercase;
-}
 
-.subscription {
-    display: flex;
+    color: $color-text-white;
 }
-
 .subscription__input {
     box-sizing: border-box;
-    width: 385px;
+    width: 100%;
     height: 50px;
     padding: 15px 16px;
     margin-top: 20px;
-    margin-right: 12px;
 
     font-family: Roboto;
     font-size: 16px;
@@ -117,6 +103,8 @@
 
 .submit {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: row;
     padding: 10px 28px 10px 29px;
     height: 50px;
@@ -133,3 +121,134 @@
     margin-left: 10px;
     fill: $color-text-btn;
 }
+
+// .footer-container {
+//     align-items: baseline;
+// }
+
+// .addresses {
+//     margin-top: 20px;
+//     margin-right: 70px;
+// }
+
+// .addresses__item:not(:first-child) {
+//     margin-top: 9px;
+// }
+
+// .addresses__link {
+//     color: $color-text-white;
+//     font-style: normal;
+//     line-height: 1.71;
+//     &:hover,
+//     &:focus {
+//         color: $color-accent;
+//         transition: color 250ms $animation-timing;
+//     }
+// }
+
+// .addresses__contact {
+//     color: $color-secondary-text;
+//     font-style: normal;
+//     line-height: 1.71px;
+
+//     &:hover,
+//     &:focus {
+//         color: $color-accent;
+//         transition: color 250ms $animation-timing;
+//     }
+// }
+
+// .social-block__title {
+//     color: $color-text-white;
+
+//     font-style: normal;
+//     font-weight: bold;
+//     line-height: 1.14;
+//     text-transform: uppercase;
+// }
+// .social-networks {
+//     display: flex;
+//     margin-top: 20px;
+// }
+
+// .social-networks__item:not(:last-child) {
+//     margin-right: 10px;
+// }
+
+// .social-networks__link {
+//     display: block;
+//     box-sizing: border-box;
+//     background-color: $color-icons-bg;
+//     width: 44px;
+//     height: 44px;
+//     padding: 12px;
+//     border-radius: 50%;
+
+//     &:hover,
+//     &:focus {
+//         background-color: $color-accent;
+//         transition: background-color 250ms $animation-timing;
+//     }
+// }
+
+// .social-networks__icon {
+//     fill: $color-primery-bg;
+// }
+
+// .subscription-form {
+//     margin-left: auto;
+// }
+
+// .subscription-form__title {
+//     color: $color-text-white;
+
+//     font-style: normal;
+//     font-weight: bold;
+//     line-height: 1.14;
+//     text-transform: uppercase;
+// }
+
+// .subscription {
+//     display: flex;
+// }
+
+// .subscription__input {
+//     box-sizing: border-box;
+//     width: 385px;
+//     height: 50px;
+//     padding: 15px 16px;
+//     margin-top: 20px;
+//     margin-right: 12px;
+
+//     font-family: Roboto;
+//     font-size: 16px;
+//     line-height: calc(20 / 16);
+//     align-items: center;
+//     letter-spacing: 0.03em;
+
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+//     border-radius: 4px;
+
+//     background-color: transparent;
+//     color: rgba(255, 255, 255, 0.6);
+// }
+
+// .submit {
+//     display: flex;
+//     flex-direction: row;
+//     padding: 10px 28px 10px 29px;
+//     height: 50px;
+//     margin-top: 20px;
+
+//     @extend %button;
+//     cursor: pointer;
+//     border: 0;
+//     border-radius: 4px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+// }
+
+// .telegram-icon {
+//     margin-left: 10px;
+//     fill: $color-text-btn;
+// }

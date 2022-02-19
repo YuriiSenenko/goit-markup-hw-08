@@ -1,12 +1,15 @@
 .our-work-section {
     @extend %section-padding;
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 }
 .our-work-container {
     flex-wrap: wrap;
 }
 
 .our-work-container__title {
-    @extend %sections-title;
+    @include title();
 }
 .task-list {
     display: flex;

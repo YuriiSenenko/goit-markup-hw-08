@@ -1,35 +1,63 @@
 .hero-section {
-    background-color: $color-bg-footer;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(
-            to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)
-        ),
-        url(../images/hero-img.jpg);
-    max-width: 1600px;
     margin: 0 auto 0 auto;
     background-position: center;
     background-size: cover;
+    background-color: $color-bg-footer;
+
+    @media screen and (max-width: 767px) {
+        padding-top: 118px;
+        padding-bottom: 118px;
+        background-image: linear-gradient(
+                to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url(../images/hero-mob-img.jpg);
+        max-width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+        padding-top: 118px;
+        padding-bottom: 118px;
+        background-image: linear-gradient(
+                to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url(../images/hero-tab-img.jpg);
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-image: linear-gradient(
+                to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url(../images/hero-dt-img.jpg);
+        max-width: 1600px;
+    }
 }
 .hero-container {
     display: block;
 }
-
 .hero-container__title {
     display: block;
-
     font-weight: 900;
-    font-size: 44px;
-    line-height: calc(60 / 44);
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
     color: $color-primery-bg;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    @media screen and (max-width: 1199px) {
+        font-size: 26px;
+        line-height: calc(42 / 26);
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: calc(60 / 44);
+    }
 }
-
 .hero-button {
     display: block;
     border: 0;

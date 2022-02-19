@@ -1,37 +1,78 @@
 .section-peculiarities {
-    padding-top: 94px;
+    @media screen and (max-width: 1999px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 0px;
+    }
 }
 
 .peculiarities-container__title {
     @extend %visually-hidden;
-    margin-left: auto;
-    margin-right: auto;
-}
-.peculiarities-list {
-    display: flex;
-    margin: 0 15px;
 }
 
 .peculiarities-list__item:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .peculiarities-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            flex-basis: calc((100% - 2 * 15px) / 2);
+        }
+    }
+    .peculiarities-list__item:nth-child(1) {
+        margin-bottom: 30px;
+    }
+    .peculiarities-list__item:nth-child(2n + 1) {
+        margin-right: 30px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .peculiarities-list {
+        display: flex;
+        flex-wrap: nowrap;
+
+        &__item {
+            flex-basis: calc((100% - 2 * 15px) / 2);
+        }
+        &__item:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
+
+.peculiarities-list__item {
+    text-align: center;
+    max-width: 450px;
+}
+
+.peculiarities-list__icon {
+    box-sizing: content-box;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    border-radius: 4px;
+    background-color: $color-secondary-bg;
+}
 .peculiarities-list__title {
-    color: $color-title;
     font-weight: bold;
     line-height: 1.14;
     text-transform: uppercase;
     margin-top: 30px;
+    color: $color-title;
 }
 .peculiarities-list__description {
     margin-top: 10px;
 
-    color: $color-secondary-text;
     line-height: 1.71;
-}
-.peculiarities-list__icon {
-    box-sizing: content-box;
-    padding: 25px 100px;
-    border-radius: 4px;
-    background-color: $color-secondary-bg;
+    color: $color-secondary-text;
 }

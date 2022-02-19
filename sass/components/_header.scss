@@ -2,14 +2,27 @@
     background-color: $color-primery-bg;
     border-bottom: 1px solid $color-secondary-bg;
 }
-
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 .navigation {
     display: flex;
 }
 .site-nav {
     display: flex;
     align-items: center;
-    margin-left: 93px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    @media screen and (max-width: 1200px) {
+        margin-left: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+    }
 }
 .site-nav__item:not(:last-child) {
     margin-right: 50px;
@@ -19,11 +32,12 @@
     padding-top: 20px;
     padding-bottom: 32px;
 
-    color: $color-title;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: calc(16 / 14);
     letter-spacing: 0.02em;
+
+    color: $color-title;
 
     &:hover,
     &:focus {
@@ -57,17 +71,28 @@
 }
 
 .contact-list {
-    display: flex;
     padding-left: 0px;
     margin-left: auto;
     align-items: center;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .contact-list__item {
-    display: flex;
-
-    & + & {
-        margin-left: 30px;
+    @media screen and (max-width: 1199px) {
+        & + & {
+            margin-top: 10px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        & + & {
+            margin-left: 30px;
+        }
     }
 }
 
@@ -76,9 +101,14 @@
     align-items: center;
     color: $color-secondary-text;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.02em;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: calc(16 / 14);
+    }
 
     &:hover,
     &:focus {
@@ -88,8 +118,14 @@
 }
 
 .contact-list__icon {
-    margin-right: 10px;
     fill: currentColor;
+    @media screen and (max-width: 1199px) {
+        margin-right: 8px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 10px;
+    }
 
     &:hover,
     &:focus {
