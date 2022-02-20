@@ -10,6 +10,9 @@
 
 .our-work-container__title {
     @include title();
+    @media screen and (min-width: 1200px) {
+        @include title($size: 36px, $height: calc(42 / 36));
+    }
 }
 .task-list {
     display: flex;

@@ -1,11 +1,28 @@
 .section-footer {
+    background-color: $color-bg-footer;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: $color-bg-footer;
+}
+.footer-container {
+    @media screen and (min-width: 767px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.address-block {
+    @media screen and (min-width: 767px) and (max-width: 1199px) {
+        margin-left: 76px;
+        margin-right: 165px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+    }
 }
 .addresses {
     margin-top: 20px;
-    text-align: center;
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
 }
 .addresses__item:not(:first-child) {
     margin-top: 8px;
@@ -42,6 +59,9 @@
     text-transform: uppercase;
 
     color: $color-text-white;
+    @media screen and (min-width: 767px) {
+        margin-top: 0;
+    }
 }
 .social-networks {
     display: flex;
@@ -70,6 +90,17 @@
 .social-networks__icon {
     fill: $color-primery-bg;
 }
+.subscription-form {
+    @media screen and (max-width: 1199px) {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 570px;
+        margin-left: auto;
+    }
+}
 .subscription-form__title {
     margin-top: 60px;
     text-align: center;
@@ -79,7 +110,18 @@
     text-transform: uppercase;
 
     color: $color-text-white;
+
+    @media screen and (min-width: 1199px) {
+        margin-top: 0;
+        text-align: left;
+    }
 }
+.subscription {
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+}
+
 .subscription__input {
     box-sizing: border-box;
     width: 100%;
@@ -99,8 +141,11 @@
 
     background-color: transparent;
     color: rgba(255, 255, 255, 0.6);
-}
 
+    @media screen and (min-width: 1200px) {
+        margin-right: 12px;
+    }
+}
 .submit {
     display: flex;
     margin-left: auto;

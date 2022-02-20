@@ -1,5 +1,7 @@
-@media screen and (max-width: 1999px) {
-    .clients-section {
+.clients-section {
+    @extend %section-padding;
+
+    @media screen and (max-width: 1199px) {
         padding-top: 60px;
         padding-bottom: 60px;
     }
@@ -7,6 +9,9 @@
 
 .clients__title {
     @include title();
+    @media screen and (min-width: 1200px) {
+        @include title($size: 36px, $height: calc(42 / 36));
+    }
 }
 
 .clients-list {
@@ -15,12 +20,20 @@
     justify-content: space-between;
 }
 .clients-list__item {
-    margin-top: 30px;
-    flex-basis: calc((100% - 2 * 15px) / 2);
+    @media screen and (max-width: 767px) {
+        margin-top: 30px;
+        flex-basis: calc((100% - 1 * 30px) / 2);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 30px;
+        flex-basis: calc((100% - 2 * 30px) / 3);
+    }
+    @media screen and (min-width: 1200px) {
+        margin-top: 50px;
+        flex-basis: calc((100% - 5 * 30px) / 6);
+    }
 }
-.clients-list__item:nth-child(2n + 1) {
-    margin-right: 30px;
-}
+
 .clients-list__link {
     fill: $color-icons;
     display: block;
