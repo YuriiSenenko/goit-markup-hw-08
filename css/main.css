@@ -1374,7 +1374,6 @@ p {
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
-    overflow-y: scroll;
     top: 50%;
     left: 50%;
     width: 450px;
