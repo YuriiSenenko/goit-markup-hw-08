@@ -24,6 +24,7 @@
                     <a class="logo logo--header" href="./index.html">
                         Web<span>Studio</span>
                     </a>
+
                     <ul class="site-nav">
                         <li class="site-nav__item">
                             <a class="site-nav__link" href="./index.html"
@@ -42,7 +43,6 @@
                         </li>
                     </ul>
                 </nav>
-
                 <ul class="contact-list">
                     <li class="contact-list__item">
                         <a
@@ -72,6 +72,96 @@
                         </a>
                     </li>
                 </ul>
+                <!-- мобильное меню -->
+                <button
+                    class="button-menu is-open"
+                    data-menu-button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg
+                        width="40"
+                        height="40"
+                        aria-label="Переключатель мобильного меню"
+                    >
+                        <use
+                            class="icon-menu"
+                            href="./images/sprite.svg#icon-cross"
+                        ></use>
+                        <use
+                            class="icon-cross"
+                            href="./images/sprite.svg#icon-menu"
+                        ></use>
+                    </svg>
+                </button>
+                <div class="mobile-menu" id="mobile-menu" data-menu>
+                    <ul class="mb-site-nav">
+                        <li class="mb-site-nav__item">
+                            <a class="mb-site-nav__link" href="./index.html"
+                                >Студия</a
+                            >
+                        </li>
+                        <li class="mb-site-nav__item">
+                            <a
+                                href="./portfolio.html"
+                                class="mb-site-nav__link current"
+                                >Портфолио</a
+                            >
+                        </li>
+                        <li class="mb-site-nav__item">
+                            <a href="" class="mb-site-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="mb-contact-list">
+                        <li class="mb-contact-list__item">
+                            <a
+                                href="tel:+380961111111"
+                                class="mb-contact-list__tel"
+                            >
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="mb-contact-list__item">
+                            <a
+                                href="mailto:info@devstudio.com"
+                                class="mb-contact-list__mail"
+                            >
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mb-social-list">
+                        <li class="mb-social-list__item">
+                            <a
+                                class="mb-social-list__link"
+                                href="https://www.instagram.com/"
+                                >Instagram</a
+                            >
+                        </li>
+                        <li class="mb-social-list__item">
+                            <a
+                                class="mb-social-list__link"
+                                href="https://twitter.com/?lang=ru"
+                                >Twitter</a
+                            >
+                        </li>
+                        <li class="mb-social-list__item">
+                            <a
+                                class="mb-social-list__link"
+                                href="https://www.facebook.com/"
+                                >Facebook</a
+                            >
+                        </li>
+                        <li class="mb-social-list__item">
+                            <a
+                                class="mb-social-list__link"
+                                href="https://www.linkedin.com/"
+                                >LinkedIn</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
@@ -116,7 +206,12 @@
                             <a class="project-list__link" href="">
                                 <div class="project-img">
                                     <img
-                                        src="./images/technokryak.jpg"
+                                        class="project-img__item"
+                                        srcset="
+                                            ./images/technokryak@1x.jpg 1x,
+                                            ./images/technokryak@2x.jpg 2x
+                                        "
+                                        src="./images/technokryak@1x.jpg"
                                         alt="ноутбук"
                                         width="370"
                                     />
@@ -145,7 +240,12 @@
                             <a class="project-list__link" href="">
                                 <div class="project-img">
                                     <img
-                                        src="./images/poster.jpg"
+                                        class="project-img__item"
+                                        srcset="
+                                            ./images/poster@1x.jpg 1x,
+                                            ./images/poster@2x.jpg 2x
+                                        "
+                                        src="./images/poster@1x.jpg"
                                         alt="баскетболисты"
                                         width="370"
                                     />
@@ -172,7 +272,12 @@
                             <a class="project-list__link" href="">
                                 <div class="project-img">
                                     <img
-                                        src="./images/restorant-seafood.jpg"
+                                        class="project-img__item"
+                                        srcset="
+                                            ./images/restorant-seafood@1x.jpg 1x,
+                                            ./images/restorant-seafood@2x.jpg 2x
+                                        "
+                                        src="./images/restorant-seafood@1x.jpg"
                                         alt="логотип Seafood"
                                         width="370"
                                     />
@@ -201,7 +306,12 @@
                             <a class="project-list__link" href="">
                                 <div class="project-img">
                                     <img
-                                        src="./images/project-prime.jpg"
+                                        class="project-img__item"
+                                        srcset="
+                                            ./images/project-prime@1x.jpg 1x,
+                                            ./images/project-prime@2x.jpg 2x
+                                        "
+                                        src="./images/project-prime@1x.jpg"
                                         alt="наушники"
                                         width="370"
                                     />
@@ -230,7 +340,12 @@
                             <a class="project-list__link" href="">
                                 <div class="project-img">
                                     <img
-                                        src="./images/project-boxes.jpg"
+                                        class="project-img__item"
+                                        srcset="
+                                            ./images/project-boxes@1x.jpg 1x,
+                                            ./images/project-boxes@2x.jpg 2x
+                                        "
+                                        src="./images/project-boxes@1x.jpg"
                                         alt="две коробочки"
                                         width="370"
                                     />
@@ -259,7 +374,12 @@
                             <a class="project-list__link" href="">
                                 <div class="project-img">
                                     <img
-                                        src="./images/inspiration-has-no-borders.jpg"
+                                        class="project-img__item"
+                                        srcset="
+                                            ./images/inspiration-has-no-borders@1x.jpg 1x,
+                                            ./images/inspiration-has-no-borders@2x.jpg 2x
+                                        "
+                                        src="./images/inspiration-has-no-borders@1x.jpg"
                                         alt="iMac"
                                         width="370"
                                     />
@@ -288,7 +408,12 @@
                             <a class="project-list__link" href="">
                                 <div class="project-img">
                                     <img
-                                        src="./images/limited-edition.jpg"
+                                        class="project-img__item"
+                                        srcset="
+                                            ./images/limited-edition@1x.jpg 1x,
+                                            ./images/limited-edition@2x.jpg 2x
+                                        "
+                                        src="./images/limited-edition@1x.jpg"
                                         alt="книжка"
                                         width="370"
                                     />
@@ -315,7 +440,12 @@
                             <a class="project-list__link" href="">
                                 <div class="project-img">
                                     <img
-                                        src="./images/project-lab.jpg"
+                                        class="project-img__item"
+                                        srcset="
+                                            ./images/project-lab@1x.jpg 1x,
+                                            ./images/project-lab@2x.jpg 2x
+                                        "
+                                        src="./images/project-lab@1x.jpg"
                                         alt="бирка на шнурке"
                                         width="370"
                                     />
@@ -344,7 +474,12 @@
                             <a class="project-list__link" href="">
                                 <div class="project-img">
                                     <img
-                                        src="./images/growing-business.jpg"
+                                        class="project-img__item"
+                                        srcset="
+                                            ./images/growing-business@1x.jpg 1x,
+                                            ./images/growing-business@2x.jpg 2x
+                                        "
+                                        src="./images/growing-business@1x.jpg"
                                         alt="работа на ноутбуке"
                                         width="370"
                                     />
@@ -376,7 +511,7 @@
         <!-- Футер -->
         <footer class="section-footer">
             <div class="footer-container container">
-                <div class="">
+                <div class="address-block">
                     <a class="logo logo--footer" href="./index.html">
                         Web<span>Studio</span>
                     </a>
@@ -505,5 +640,6 @@
                 </form>
             </div>
         </footer>
+        <script src="./js/menu.js"></script>
     </body>
 </html>
