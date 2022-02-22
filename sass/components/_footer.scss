@@ -1,7 +1,6 @@
 .section-footer {
+    @include section();
     background-color: $color-bg-footer;
-    padding-top: 60px;
-    padding-bottom: 60px;
 }
 .footer-container {
     @media screen and (min-width: 767px) {
@@ -10,11 +9,12 @@
     }
 }
 .address-block {
-    @media screen and (min-width: 767px) and (max-width: 1199px) {
+    @media screen and (min-width: 767px) {
         margin-left: 76px;
         margin-right: 165px;
     }
     @media screen and (min-width: 1200px) {
+        margin-left: 0;
         margin-right: 70px;
     }
 }
@@ -121,7 +121,7 @@
 
     color: $color-text-white;
 
-    @media screen and (min-width: 1199px) {
+    @media screen and (min-width: 1200px) {
         margin-top: 0;
         text-align: left;
     }
@@ -176,134 +176,3 @@
     margin-left: 10px;
     fill: $color-text-btn;
 }
-
-// .footer-container {
-//     align-items: baseline;
-// }
-
-// .addresses {
-//     margin-top: 20px;
-//     margin-right: 70px;
-// }
-
-// .addresses__item:not(:first-child) {
-//     margin-top: 9px;
-// }
-
-// .addresses__link {
-//     color: $color-text-white;
-//     font-style: normal;
-//     line-height: 1.71;
-//     &:hover,
-//     &:focus {
-//         color: $color-accent;
-//         transition: color 250ms $animation-timing;
-//     }
-// }
-
-// .addresses__contact {
-//     color: $color-secondary-text;
-//     font-style: normal;
-//     line-height: 1.71px;
-
-//     &:hover,
-//     &:focus {
-//         color: $color-accent;
-//         transition: color 250ms $animation-timing;
-//     }
-// }
-
-// .social-block__title {
-//     color: $color-text-white;
-
-//     font-style: normal;
-//     font-weight: bold;
-//     line-height: 1.14;
-//     text-transform: uppercase;
-// }
-// .social-networks {
-//     display: flex;
-//     margin-top: 20px;
-// }
-
-// .social-networks__item:not(:last-child) {
-//     margin-right: 10px;
-// }
-
-// .social-networks__link {
-//     display: block;
-//     box-sizing: border-box;
-//     background-color: $color-icons-bg;
-//     width: 44px;
-//     height: 44px;
-//     padding: 12px;
-//     border-radius: 50%;
-
-//     &:hover,
-//     &:focus {
-//         background-color: $color-accent;
-//         transition: background-color 250ms $animation-timing;
-//     }
-// }
-
-// .social-networks__icon {
-//     fill: $color-primery-bg;
-// }
-
-// .subscription-form {
-//     margin-left: auto;
-// }
-
-// .subscription-form__title {
-//     color: $color-text-white;
-
-//     font-style: normal;
-//     font-weight: bold;
-//     line-height: 1.14;
-//     text-transform: uppercase;
-// }
-
-// .subscription {
-//     display: flex;
-// }
-
-// .subscription__input {
-//     box-sizing: border-box;
-//     width: 385px;
-//     height: 50px;
-//     padding: 15px 16px;
-//     margin-top: 20px;
-//     margin-right: 12px;
-
-//     font-family: Roboto;
-//     font-size: 16px;
-//     line-height: calc(20 / 16);
-//     align-items: center;
-//     letter-spacing: 0.03em;
-
-//     border: 1px solid rgba(255, 255, 255, 0.3);
-//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-//     border-radius: 4px;
-
-//     background-color: transparent;
-//     color: rgba(255, 255, 255, 0.6);
-// }
-
-// .submit {
-//     display: flex;
-//     flex-direction: row;
-//     padding: 10px 28px 10px 29px;
-//     height: 50px;
-//     margin-top: 20px;
-
-//     @extend %button;
-//     cursor: pointer;
-//     border: 0;
-//     border-radius: 4px;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-// }
-
-// .telegram-icon {
-//     margin-left: 10px;
-//     fill: $color-text-btn;
-// }

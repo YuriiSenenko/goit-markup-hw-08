@@ -1,8 +1,4 @@
 .backdrop {
-    @media screen and (max-width: 767px) {
-        padding: 93px 15px;
-    }
-
     position: fixed;
     top: 0;
     left: 0;
@@ -13,6 +9,10 @@
 
     opacity: 1;
     transition: opacity 250ms linear;
+
+    @media screen and (max-width: 767px) {
+        padding: 93px 15px;
+    }
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -21,6 +21,14 @@
 
 .modal {
     padding: 40px;
+
+    border-radius: 4px;
+    background-color: $color-primery-bg;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transition: transform 250ms linear;
+
     @media screen and (max-width: 767px) {
         position: relative;
         max-width: 450px;
@@ -30,7 +38,6 @@
 
     @media screen and (min-width: 768px) {
         position: absolute;
-        // overflow-y: scroll;
         top: 50%;
         left: 50%;
 
@@ -42,13 +49,6 @@
         width: 528px;
         height: 581px;
     }
-
-    border-radius: 4px;
-    background-color: $color-primery-bg;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-
-    transition: transform 250ms linear;
 
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0);

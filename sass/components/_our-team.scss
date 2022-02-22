@@ -1,9 +1,9 @@
 .our-team-section {
-    @extend %section-padding;
+    @include section();
     background-color: $color-secondary-bg;
-    @media screen and (max-width: 1199px) {
-        padding-top: 60px;
-        padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        @include section($top: 94px, $bottom: 94px);
     }
 }
 

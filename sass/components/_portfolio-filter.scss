@@ -1,8 +1,8 @@
 .portfolio-section {
-    @extend %section-padding;
-    @media screen and (max-width: 1199px) {
-        padding-top: 60px;
-        padding-bottom: 60px;
+    @include section();
+
+    @media screen and (min-width: 1200px) {
+        @include section($top: 94px, $bottom: 94px);
     }
 }
 
