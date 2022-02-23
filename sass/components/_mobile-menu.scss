@@ -1,5 +1,5 @@
 .button-menu {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     right: 15px;
     top: 0;
@@ -25,24 +25,28 @@
 }
 
 .mobile-menu {
-    outline: 1px solid black;
+    position: fixed;
     display: none;
-    position: absolute;
     z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
     padding: 48px 40px;
     background-color: $color-primery-bg;
+    flex-direction: column;
+    justify-content: space-between;
 
     &.is-open {
-        display: block;
+        display: flex;
         @media screen and (min-width: 768px) {
             display: none;
         }
     }
 }
-
+.mb-site-nav {
+    flex-grow: 1.5;
+}
 .mb-site-nav__item:not(:first-child) {
     margin-top: 32px;
 }
@@ -55,7 +59,7 @@
     color: $color-title;
 }
 .mb-contact-list {
-    margin-top: 302px;
+    flex-grow: 0.5;
     &__item:not(:first-child) {
         margin-top: 32px;
     }
@@ -78,7 +82,6 @@
 .mb-social-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 64px;
 }
 .mb-social-list__item:not(:last-child) {
     margin-right: 20px;

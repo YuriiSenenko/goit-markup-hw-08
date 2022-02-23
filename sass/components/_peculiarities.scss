@@ -68,9 +68,13 @@
     text-transform: uppercase;
     margin-top: 30px;
     color: $color-title;
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
 }
 .peculiarities-list__description {
     margin-top: 10px;
+    text-align: left;
 
     line-height: 1.71;
     color: $color-secondary-text;

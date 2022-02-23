@@ -41,7 +41,6 @@ p {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid tomato;
 }
 
 @media screen and (min-width: 480px) {
@@ -103,15 +102,15 @@ p {
 
 @media screen and (max-width: 767px) {
   .logo--header {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .logo--header {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -135,7 +134,7 @@ p {
 }
 
 .button-menu {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   right: 15px;
   top: 0;
@@ -166,25 +165,40 @@ p {
 }
 
 .mobile-menu {
-  outline: 1px solid black;
+  position: fixed;
   display: none;
-  position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
   padding: 48px 40px;
   background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .mobile-menu.is-open {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (min-width: 768px) {
   .mobile-menu.is-open {
     display: none;
   }
+}
+
+.mb-site-nav {
+  -webkit-box-flex: 1.5;
+      -ms-flex-positive: 1.5;
+          flex-grow: 1.5;
 }
 
 .mb-site-nav__item:not(:first-child) {
@@ -201,7 +215,9 @@ p {
 }
 
 .mb-contact-list {
-  margin-top: 302px;
+  -webkit-box-flex: 0.5;
+      -ms-flex-positive: 0.5;
+          flex-grow: 0.5;
 }
 
 .mb-contact-list__item:not(:first-child) {
@@ -230,7 +246,6 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 64px;
 }
 
 .mb-social-list__item:not(:last-child) {
@@ -441,15 +456,15 @@ p {
   .hero-section {
     padding-top: 118px;
     padding-bottom: 118px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/hero-mob-img.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-mob-img.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-mob-img.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mob-img.jpg);
     max-width: 480px;
   }
 }
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .hero-section {
-    background-image: url(/images/hero-mob-img@2x.jpg);
+    background-image: url(../images/hero-mob-img@2x.jpg);
   }
 }
 
@@ -465,7 +480,7 @@ p {
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero-section {
-    background-image: url(/images/hero-tab-img@2x.jpg);
+    background-image: url(../images/hero-tab-img@2x.jpg);
   }
 }
 
@@ -481,7 +496,7 @@ p {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero-section {
-    background-image: url(/images/hero-dt-img@2x.jpg);
+    background-image: url(../images/hero-dt-img@2x.jpg);
   }
 }
 
@@ -595,8 +610,15 @@ p {
   color: #212121;
 }
 
+@media screen and (min-width: 768px) {
+  .peculiarities-list__title {
+    text-align: left;
+  }
+}
+
 .peculiarities-list__description {
   margin-top: 10px;
+  text-align: left;
   line-height: 1.71;
   color: #757575;
 }
