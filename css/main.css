@@ -61,6 +61,10 @@ p {
   }
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .peculiarities-container__title, .portfolio-container__title {
   position: absolute;
   white-space: nowrap;
@@ -134,7 +138,7 @@ p {
 }
 
 .button-menu {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   right: 15px;
   top: 0;
@@ -171,7 +175,7 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 48px 40px;
   background-color: #ffffff;
   -webkit-box-orient: vertical;

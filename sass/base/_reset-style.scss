@@ -54,3 +54,7 @@ p {
         width: 1200px;
     }
 }
+
+body.modal-open {
+    overflow: hidden;
+}
